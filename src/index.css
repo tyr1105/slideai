@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-500: #0c93e7;
+  --brand-600: #0074c5;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+/* 幻灯片预览样式 */
+.slide-preview {
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-preview .slide-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* 模板配色 */
+.template-business {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+  color: white;
+}
+
+.template-pitch {
+  background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+  color: white;
+}
+
+.template-education {
+  background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+  color: white;
+}
+
+.template-creative {
+  background: linear-gradient(135deg, #f43f5e 0%, #f97316 100%);
+  color: white;
+}
+
+.template-minimal {
+  background: #ffffff;
+  color: #1f2937;
+  border: 2px solid #e5e7eb;
+}
+
+/* 编辑器 */
+.editor-panel {
+  scrollbar-width: thin;
+}
+
+/* 导出按钮动画 */
+.export-btn {
+  transition: all 0.3s ease;
+}
+
+.export-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(12, 147, 231, 0.4);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .slide-preview {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
